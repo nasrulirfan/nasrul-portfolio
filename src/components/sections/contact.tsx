@@ -117,18 +117,17 @@ export function ContactSection() {
   return (
     <Section id="contact" background="muted">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <Heading level={2} className="mb-4">
+        <div className="text-center mb-8">
+          <Heading level={2} className="mb-3">
             Let&apos;s Talk
           </Heading>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to bring your ideas to life? I&apos;m always excited to discuss new projects 
-            and opportunities. Choose the method that works best for you.
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+            Ready to bring your ideas to life? Choose the method that works best for you.
           </p>
         </div>
 
         {/* Contact Methods Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {contactMethods.map((method, index) => (
             <Card 
               key={index}
@@ -164,9 +163,9 @@ export function ContactSection() {
         </div>
 
         {/* Quick Contact Info */}
-        <div className="text-center space-y-6">
-          <div className="p-6 rounded-xl bg-card border border-border">
-            <Heading level={3} size="lg" className="mb-4">
+        <div className="text-center space-y-4">
+          <div className="p-4 rounded-xl bg-card border border-border">
+            <Heading level={3} size="md" className="mb-3">
               Quick Contact Information
             </Heading>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">

@@ -9,13 +9,13 @@ interface HeadingProps {
 }
 
 const sizeClasses = {
-  xs: "text-xs",
-  sm: "text-sm font-medium",
+  xs: "text-xs font-medium",
+  sm: "text-sm font-semibold",
   md: "text-base font-semibold",
-  lg: "text-xl font-semibold",
-  xl: "text-2xl md:text-3xl font-bold",
-  "2xl": "text-3xl md:text-4xl lg:text-5xl font-bold",
-  "3xl": "text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold",
+  lg: "text-lg font-semibold",
+  xl: "text-xl md:text-2xl font-semibold",
+  "2xl": "text-2xl md:text-3xl lg:text-4xl font-semibold",
+  "3xl": "text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tighter",
 };
 
 export function Heading({
@@ -42,7 +42,7 @@ export function Heading({
   return (
     <Component
       className={cn(
-        "text-foreground tracking-tight text-balance",
+        "text-foreground text-balance leading-tight",
         sizeClasses[finalSize],
         className
       )}

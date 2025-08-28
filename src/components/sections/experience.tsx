@@ -1,6 +1,9 @@
+"use client";
+
 import { Section } from "@/components/ui/section";
 import { Heading } from "@/components/ui/heading";
 import { Card, CardContent } from "@/components/ui/card";
+import { useEffect, useRef, useState } from "react";
 
 interface Experience {
   title: string;
@@ -96,28 +99,64 @@ const typeColors = {
 };
 
 export function ExperienceSection() {
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const [visibleItems, setVisibleItems] = useState<number[]>([]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!timelineRef.current) return;
+
+      const timelineTop = timelineRef.current.offsetTop;
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const newVisibleItems: number[] = [];
+
+      experienceData.forEach((_, index) => {
+        const itemPosition = timelineTop + (index * 300); // Approximate item spacing
+        if (scrollPosition > itemPosition + 100) {
+          newVisibleItems.push(index);
+        }
+      });
+
+      setVisibleItems(newVisibleItems);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <Section id="experience" background="muted">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <Heading level={2} className="mb-4">
+        <div className="text-center mb-8">
+          <Heading level={2} className="mb-3">
             Work Experience
           </Heading>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto">
             A journey through my professional career, showcasing growth and achievements 
-            in full-stack development across various industries and technologies.
+            in full-stack development.
           </p>
         </div>
 
-        <div className="relative">
-          {/* Timeline Line */}
+        <div className="relative" ref={timelineRef}>
+          {/* Timeline Line - Static Background */}
           <div 
-            className="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block" 
+            className="absolute left-8 top-0 bottom-0 w-0.5 bg-border/30 hidden md:block" 
+            aria-hidden="true"
+          />
+          
+          {/* Timeline Line - Animated Progress */}
+          <div 
+            className="absolute left-8 top-0 w-0.5 bg-gradient-to-b from-primary to-blue-500 hidden md:block transition-all duration-1000 ease-out" 
+            style={{
+              height: `${(visibleItems.length / experienceData.length) * 100}%`
+            }}
             aria-hidden="true"
           />
           
           <div 
-            className="space-y-8"
+            className="space-y-6"
             role="region"
             aria-label="Professional work experience timeline"
           >
@@ -125,13 +164,21 @@ export function ExperienceSection() {
               <div key={index} className="relative">
                 {/* Timeline Dot */}
                 <div 
-                  className="absolute left-6 top-6 w-4 h-4 bg-primary rounded-full border-4 border-background hidden md:block" 
+                  className={`absolute left-6 top-6 w-4 h-4 rounded-full border-4 border-background hidden md:block transition-all duration-500 ${
+                    visibleItems.includes(index) 
+                      ? 'bg-primary scale-110 shadow-lg shadow-primary/20' 
+                      : 'bg-border scale-100'
+                  }`} 
                   aria-hidden="true"
                 />
                 
                 {/* Experience Card */}
                 <Card 
-                  className="md:ml-16 hover:shadow-lg transition-shadow"
+                  className={`md:ml-16 hover:shadow-lg transition-all duration-700 ${
+                    visibleItems.includes(index)
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-30 translate-y-4'
+                  }`}
                   role="article"
                   aria-label={`${experience.title} at ${experience.company}`}
                 >

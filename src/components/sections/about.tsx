@@ -40,33 +40,34 @@ const aboutData = {
 export function AboutSection() {
   return (
     <Section id="about">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* Left Column - Content */}
-        <div className="space-y-6">
+        <div className="space-y-4">
           <div>
-            <Heading level={2} className="mb-4">
+            <Heading level={2} className="mb-3">
               About Me
             </Heading>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               {aboutData.role} based in {aboutData.location}
             </p>
           </div>
           
-          <div className="space-y-4">
-            {aboutData.description.map((paragraph, index) => (
-              <p key={index} className="text-muted-foreground leading-relaxed">
-                {paragraph}
-              </p>
-            ))}
+          <div className="space-y-3">
+            <p className="text-muted-foreground leading-relaxed">
+              I&apos;m a passionate full-stack developer with over 5 years of experience building scalable web applications and digital solutions. I specialize in modern JavaScript frameworks, cloud architecture, and creating exceptional user experiences.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              My expertise spans across front-end technologies like React, Next.js, and TypeScript, as well as back-end development with Node.js, Python, and various databases.
+            </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <Button size="lg" asChild>
+          <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <Button size="md" asChild>
               <a href="#contact">
                 Let&apos;s Work Together
               </a>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="md" asChild>
               <a 
                 href="/cv.pdf" 
                 target="_blank" 
@@ -93,85 +94,51 @@ export function AboutSection() {
           </div>
         </div>
 
-        {/* Right Column - Image and Stats */}
-        <div className="space-y-8">
-          {/* Profile Image Placeholder */}
-          <div 
-            className="relative mx-auto lg:mx-0 w-80 h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-blue-600/20 border border-border"
-            role="img"
-            aria-label="Profile image placeholder for Nasrul Irfan"
-          >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg
-                    className="w-12 h-12 text-primary"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    role="presentation"
-                  >
-                    <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                </div>
-                <p className="text-sm text-muted-foreground">Profile Image</p>
-                <p className="text-xs text-muted-foreground mt-1">
-                  Add your photo here
-                </p>
+        {/* Right Column - Stats Grid */}
+        <div className="grid grid-cols-2 gap-4">
+          {aboutData.highlights.map((highlight, index) => (
+            <div
+              key={index}
+              className="p-4 rounded-lg border border-border bg-card text-center hover:shadow-md transition-shadow"
+              role="article"
+              aria-label={`${highlight.label}: ${highlight.metric}`}
+            >
+              <div 
+                className="text-2xl font-bold text-primary mb-1"
+                aria-label={`${highlight.metric} ${highlight.label}`}
+              >
+                {highlight.metric.includes('%') ? (
+                  <AnimatedCounter 
+                    end={parseInt(highlight.metric)} 
+                    suffix="%" 
+                    duration={2.5}
+                    delay={0.5}
+                  />
+                ) : highlight.metric.includes('+') ? (
+                  <>
+                    <AnimatedCounter 
+                      end={parseInt(highlight.metric)} 
+                      suffix="+" 
+                      duration={2}
+                      delay={0.3}
+                    />
+                  </>
+                ) : (
+                  <AnimatedCounter 
+                    end={parseInt(highlight.metric)} 
+                    duration={1.8}
+                    delay={0.2}
+                  />
+                )}
+              </div>
+              <div className="text-sm font-semibold text-foreground mb-1">
+                {highlight.label}
+              </div>
+              <div className="text-xs text-muted-foreground">
+                {highlight.description}
               </div>
             </div>
-          </div>
-
-          {/* Statistics Grid */}
-          <div 
-            className="grid grid-cols-2 gap-4"
-            role="region"
-            aria-label="Professional achievements and statistics"
-          >
-            {aboutData.highlights.map((highlight, index) => (
-              <div
-                key={index}
-                className="p-4 rounded-lg border border-border bg-card text-center"
-                role="article"
-                aria-label={`${highlight.label}: ${highlight.metric}`}
-              >
-                <div 
-                  className="text-2xl font-bold text-primary mb-1"
-                  aria-label={`${highlight.metric} ${highlight.label}`}
-                >
-                  {highlight.metric.includes('%') ? (
-                    <AnimatedCounter 
-                      end={parseInt(highlight.metric)} 
-                      suffix="%" 
-                      duration={2.5}
-                      delay={0.5}
-                    />
-                  ) : highlight.metric.includes('+') ? (
-                    <>
-                      <AnimatedCounter 
-                        end={parseInt(highlight.metric)} 
-                        suffix="+" 
-                        duration={2}
-                        delay={0.3}
-                      />
-                    </>
-                  ) : (
-                    <AnimatedCounter 
-                      end={parseInt(highlight.metric)} 
-                      duration={1.8}
-                      delay={0.2}
-                    />
-                  )}
-                </div>
-                <div className="text-sm font-semibold text-foreground mb-1">
-                  {highlight.label}
-                </div>
-                <div className="text-xs text-muted-foreground">
-                  {highlight.description}
-                </div>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </Section>
