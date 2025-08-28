@@ -30,10 +30,10 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
-!.env.example
-!.env.production
+# local env files (keep .env.local for Docker build)
+.env.development.local
+.env.test.local
+.env.production.local
 
 # vercel
 .vercel
@@ -42,11 +42,32 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Personal
-.claude
-LEARNING_GUIDE.md
-NEXTJS_DEEP_DIVE.md
-REACT_FOR_VUE_DEVELOPERS.md
-SYSTEM_ARCHITECTURE.md
-TAILWIND_GUIDE.md
-PRACTICAL_EXERCISES.md
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+
+# Git
+.git
+.gitignore
+README.md
+DEPLOYMENT.md
+
+# Docker
+Dockerfile
+.dockerignore
+
+# CI/CD
+.github/
+
+# Logs
+logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp

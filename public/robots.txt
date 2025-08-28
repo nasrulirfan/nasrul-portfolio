@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Block access to API routes for crawlers
+Disallow: /api/
+
+# Block access to private directories
+Disallow: /_next/
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://nasrul.dev/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

@@ -4,24 +4,42 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "build:analyze": "ANALYZE=true npm run build",
+    "preview": "npm run build && npm run start",
+    "clean": "rm -rf .next",
+    "docker:build": "docker build -t nasrul-portfolio .",
+    "docker:run": "docker run -p 3000:3000 --env-file .env.local nasrul-portfolio",
+    "docker:dev": "docker-compose up --build",
+    "docker:prod": "docker-compose --profile production up -d --build",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f portfolio",
+    "docker:health": "curl -f http://localhost:3000/api/health || exit 1"
   },
   "dependencies": {
+    "@hcaptcha/react-hcaptcha": "^1.12.1",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@types/nodemailer": "^7.0.1",
+    "clsx": "^2.1.1",
+    "next": "15.5.2",
+    "nodemailer": "^7.0.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.2"
+    "tailwind-merge": "^3.3.1",
+    "zod": "^4.1.4"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
