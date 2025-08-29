@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 
 const aboutData = {
-  name: "Nasrul Irfan",
+  name: "Wan Nasrul Irfan",
   role: "Full-Stack Developer",
   location: "Malaysia",
   experience: "5+ years",

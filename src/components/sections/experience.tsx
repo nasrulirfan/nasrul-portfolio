@@ -100,27 +100,46 @@ const typeColors = {
 
 export function ExperienceSection() {
   const timelineRef = useRef<HTMLDivElement>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
 
   useEffect(() => {
     const handleScroll = () => {
       if (!timelineRef.current) return;
 
-      const timelineTop = timelineRef.current.offsetTop;
-      const scrollPosition = window.scrollY + window.innerHeight;
-      const newVisibleItems: number[] = [];
+      const element = timelineRef.current;
+      const rect = element.getBoundingClientRect();
+      const elementTop = rect.top + window.scrollY;
+      const elementHeight = element.offsetHeight;
+      const windowHeight = window.innerHeight;
+      const scrollTop = window.scrollY;
 
-      experienceData.forEach((_, index) => {
-        const itemPosition = timelineTop + (index * 300); // Approximate item spacing
-        if (scrollPosition > itemPosition + 100) {
-          newVisibleItems.push(index);
-        }
-      });
+      // Calculate when the element starts and ends being visible
+      const startOffset = elementTop - windowHeight;
+      const endOffset = elementTop + elementHeight;
+
+      // Current scroll position relative to the element
+      const totalScrollDistance = endOffset - startOffset;
+      const currentProgress = scrollTop - startOffset;
+      
+      // Calculate percentage (0 to 100)
+      let progressPercentage = (currentProgress / totalScrollDistance) * 100;
+      progressPercentage = Math.max(0, Math.min(100, progressPercentage));
+
+      setScrollProgress(progressPercentage);
+
+      // Update visible items based on scroll progress
+      const newVisibleItems: number[] = [];
+      const itemsToShow = Math.floor((progressPercentage / 100) * experienceData.length * 1.2);
+      
+      for (let i = 0; i <= Math.min(itemsToShow, experienceData.length - 1); i++) {
+        newVisibleItems.push(i);
+      }
 
       setVisibleItems(newVisibleItems);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Initial check
 
     return () => window.removeEventListener('scroll', handleScroll);
@@ -148,37 +167,79 @@ export function ExperienceSection() {
           
           {/* Timeline Line - Animated Progress */}
           <div 
-            className="absolute left-8 top-0 w-0.5 bg-gradient-to-b from-primary to-blue-500 hidden md:block transition-all duration-1000 ease-out" 
+            className="absolute left-8 top-0 w-0.5 bg-gradient-to-b from-primary via-blue-500 to-purple-600 hidden md:block transition-all duration-75 ease-out shadow-lg shadow-primary/20" 
             style={{
-              height: `${(visibleItems.length / experienceData.length) * 100}%`
+              height: `${scrollProgress}%`,
+              filter: 'blur(0.5px)',
+              boxShadow: '0 0 8px rgba(59, 130, 246, 0.3)'
             }}
             aria-hidden="true"
           />
+          
+          {/* Glowing dot at the end of the line */}
+          {scrollProgress > 0 && (
+            <div 
+              className="absolute left-6 w-3 h-3 bg-primary rounded-full hidden md:block transition-all duration-75 ease-out animate-pulse shadow-lg shadow-primary/40"
+              style={{
+                top: `${scrollProgress}%`,
+                transform: 'translateY(-50%)',
+                filter: 'brightness(1.2)'
+              }}
+              aria-hidden="true"
+            />
+          )}
           
           <div 
             className="space-y-6"
             role="region"
             aria-label="Professional work experience timeline"
           >
-            {experienceData.map((experience, index) => (
+            {experienceData.map((experience, index) => {
+              const itemProgress = Math.max(0, Math.min(1, (scrollProgress / 100) * experienceData.length - index));
+              const isVisible = visibleItems.includes(index);
+              
+              return (
               <div key={index} className="relative">
                 {/* Timeline Dot */}
                 <div 
-                  className={`absolute left-6 top-6 w-4 h-4 rounded-full border-4 border-background hidden md:block transition-all duration-500 ${
-                    visibleItems.includes(index) 
-                      ? 'bg-primary scale-110 shadow-lg shadow-primary/20' 
-                      : 'bg-border scale-100'
+                  className={`absolute left-6 top-6 w-4 h-4 rounded-full border-4 border-background hidden md:block transition-all duration-300 ease-out ${
+                    isVisible 
+                      ? 'bg-primary shadow-lg shadow-primary/40' 
+                      : 'bg-border/50'
                   }`} 
+                  style={{
+                    transform: `scale(${isVisible ? 1.15 + (itemProgress * 0.1) : 0.9})`,
+                    filter: isVisible ? `brightness(${1.1 + (itemProgress * 0.2)}) saturate(1.2)` : 'brightness(0.7)',
+                    boxShadow: isVisible ? `0 0 ${8 + (itemProgress * 4)}px rgba(59, 130, 246, ${0.3 + (itemProgress * 0.2)})` : 'none'
+                  }}
                   aria-hidden="true"
                 />
                 
+                {/* Ripple effect for active dots */}
+                {isVisible && (
+                  <div 
+                    className="absolute left-6 top-6 w-4 h-4 rounded-full border-2 border-primary/30 hidden md:block animate-ping"
+                    style={{
+                      animationDuration: '2s',
+                      opacity: itemProgress * 0.5
+                    }}
+                    aria-hidden="true"
+                  />
+                )}
+                
                 {/* Experience Card */}
                 <Card 
-                  className={`md:ml-16 hover:shadow-lg transition-all duration-700 ${
-                    visibleItems.includes(index)
-                      ? 'opacity-100 translate-y-0'
-                      : 'opacity-30 translate-y-4'
+                  className={`md:ml-16 hover:shadow-lg transition-all duration-500 ease-out ${
+                    isVisible
+                      ? 'opacity-100 translate-y-0 scale-100'
+                      : 'opacity-20 translate-y-6 scale-95'
                   }`}
+                  style={{
+                    transform: `translateY(${isVisible ? 0 : 24}px) scale(${isVisible ? 1 + (itemProgress * 0.02) : 0.95})`,
+                    opacity: isVisible ? 1 : 0.2,
+                    filter: isVisible ? `brightness(${1 + (itemProgress * 0.05)})` : 'brightness(0.9)',
+                    borderColor: isVisible ? `rgba(59, 130, 246, ${0.1 + (itemProgress * 0.1)})` : 'transparent'
+                  }}
                   role="article"
                   aria-label={`${experience.title} at ${experience.company}`}
                 >
@@ -250,7 +311,8 @@ export function ExperienceSection() {
                   </CardContent>
                 </Card>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 

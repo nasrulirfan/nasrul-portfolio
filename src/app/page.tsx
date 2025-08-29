@@ -43,7 +43,7 @@ export default function Home() {
             <AnimatedSection animation="slide-up" delay={0.2}>
               <div className="space-y-2 mb-6">
                 <p className="text-lg md:text-xl text-muted-foreground">
-                  Hey, I&apos;m <span className="text-primary font-semibold">Nasrul Irfan</span> 👋
+                  Hey, I&apos;m <span className="text-primary font-semibold">Nas</span> 👋
                 </p>
                 <Heading level={1} className="text-4xl md:text-6xl lg:text-7xl font-bold">
                   <span className="bg-gradient-to-r from-blue-400 via-blue-600 to-purple-600 bg-clip-text text-transparent">

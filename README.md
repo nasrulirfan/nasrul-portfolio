@@ -1,4 +1,4 @@
-# Nasrul Irfan - Portfolio Website
+# Wan Nasrul Irfan - Portfolio Website
 
 A modern, high-performance portfolio website built with Next.js 15, TypeScript, and Tailwind CSS. Features a clean design inspired by modern web standards with full accessibility compliance and professional deployment configuration.
 
@@ -242,6 +242,6 @@ For questions or support, please [open an issue](https://github.com/nasrulirfan/
 
 ---
 
-**Built with ❤️ by Nasrul Irfan**
+**Built with ❤️ by Wan  Nasrul Irfan**
 
 [Portfolio](https://nasrul.dev) • [LinkedIn](https://linkedin.com/in/nasrulirfan) • [GitHub](https://github.com/nasrulirfan)

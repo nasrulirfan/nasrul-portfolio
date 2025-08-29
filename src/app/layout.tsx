@@ -20,12 +20,12 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Nasrul Irfan - Full-Stack Developer",
-    template: "%s | Nasrul Irfan - Full-Stack Developer"
+    default: "Wan Nasrul Irfan - Full-Stack Developer",
+    template: "%s | Wan Nasrul Irfan - Full-Stack Developer"
   },
   description: "Passionate full-stack developer with 5+ years of experience building scalable web applications. Specializing in React, Next.js, Node.js, and modern web technologies.",
   keywords: [
-    "Nasrul Irfan",
+    "Wan Nasrul Irfan",
     "Full-Stack Developer",
     "React Developer",
     "Next.js Developer",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     "Web Development",
     "Portfolio"
   ],
-  authors: [{ name: "Nasrul Irfan", url: "https://nasrul.dev" }],
-  creator: "Nasrul Irfan",
-  publisher: "Nasrul Irfan",
+  authors: [{ name: "Wan Nasrul Irfan", url: "https://nasrul.dev" }],
+  creator: "Wan Nasrul Irfan",
+  publisher: "Wan Nasrul Irfan",
   metadataBase: new URL("https://nasrul.dev"),
   alternates: {
     canonical: "/",
@@ -50,21 +50,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://nasrul.dev",
-    siteName: "Nasrul Irfan Portfolio",
-    title: "Nasrul Irfan - Full-Stack Developer",
+    siteName: "Wan Nasrul Irfan Portfolio",
+    title: "Wan Nasrul Irfan - Full-Stack Developer",
     description: "Passionate full-stack developer with 5+ years of experience building scalable web applications. Specializing in React, Next.js, Node.js, and modern web technologies.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Nasrul Irfan - Full-Stack Developer",
+        alt: "Wan Nasrul Irfan - Full-Stack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nasrul Irfan - Full-Stack Developer",
+    title: "Wan Nasrul Irfan - Full-Stack Developer",
     description: "Passionate full-stack developer with 5+ years of experience building scalable web applications.",
     images: ["/og-image.png"],
     creator: "@nasrulirfan",

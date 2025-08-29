@@ -23,9 +23,9 @@ export function Header() {
             <a
               href="#"
               className="text-xl font-bold text-foreground hover:text-primary transition-colors"
-              aria-label="Nasrul Irfan - Portfolio Home"
+              aria-label="Wan Nasrul Irfan - Portfolio Home"
             >
-              Nasrul Irfan
+              Wan Nasrul Irfan
             </a>
           </div>
 

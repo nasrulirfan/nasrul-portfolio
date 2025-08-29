@@ -17,7 +17,7 @@ export function generateSEO({
   ogImage = "/og-image.png",
   noIndex = false,
 }: SEOProps = {}): Metadata {
-  const defaultTitle = "Nasrul Irfan - Full-Stack Developer";
+  const defaultTitle = "Wan Nasrul Irfan - Full-Stack Developer";
   const defaultDescription = "Passionate full-stack developer with 5+ years of experience building scalable web applications. Specializing in React, Next.js, Node.js, and modern web technologies.";
   
   const seoTitle = title ? `${title} | ${defaultTitle}` : defaultTitle;
@@ -30,7 +30,7 @@ export function generateSEO({
     title: seoTitle,
     description: seoDescription,
     keywords: [
-      "Nasrul Irfan",
+      "Wan Nasrul Irfan",
       "Full-Stack Developer",
       "React Developer",
       "Next.js Developer",
@@ -52,7 +52,7 @@ export function generateSEO({
       type: "website",
       locale: "en_US",
       url: fullUrl,
-      siteName: "Nasrul Irfan Portfolio",
+      siteName: "Wan Nasrul Irfan Portfolio",
       title: seoTitle,
       description: seoDescription,
       images: [
@@ -93,7 +93,7 @@ export function generatePersonStructuredData() {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Nasrul Irfan",
+    name: "Wan Nasrul Irfan",
     url: "https://nasrul.dev",
     jobTitle: "Full-Stack Developer",
     description: "Passionate full-stack developer with 5+ years of experience building scalable web applications.",
@@ -129,16 +129,16 @@ export function generateWebsiteStructuredData() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Nasrul Irfan Portfolio",
+    name: "Wan Nasrul Irfan Portfolio",
     url: "https://nasrul.dev",
-    description: "Professional portfolio of Nasrul Irfan, a full-stack developer specializing in modern web technologies.",
+    description: "Professional portfolio of Wan Nasrul Irfan, a full-stack developer specializing in modern web technologies.",
     author: {
       "@type": "Person",
-      name: "Nasrul Irfan",
+      name: "Wan Nasrul Irfan",
     },
     publisher: {
       "@type": "Person",
-      name: "Nasrul Irfan",
+      name: "Wan Nasrul Irfan",
     },
   };
 }
