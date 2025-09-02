@@ -18,75 +18,73 @@ interface Experience {
 
 const experienceData: Experience[] = [
   {
-    title: "Senior Full-Stack Developer",
-    company: "TechCorp Solutions",
-    location: "Kuala Lumpur, Malaysia",
-    period: "Jan 2022 - Present",
+    title: "Senior Software Engineer",
+    company: "CompAsia",
+    location: "Malaysia",
+    period: "July 2024 - Present",
     type: "full-time",
     description: [
-      "Led development of scalable web applications serving 100k+ active users",
-      "Architected and implemented microservices using Node.js and Docker",
-      "Mentored junior developers and conducted code reviews"
+      "Led rapid deployment of company-wide e-Invoicing system for Renew+ using Laravel modules to meet tight deadlines",
+      "Contributed full stack expertise to Inventory Management System, driving requirements gathering, conducting thorough code reviews, and creating comprehensive technical documentation",
+      "Optimized MySQL queries and managed Redis queues and caching to boost performance"
     ],
-    technologies: ["React", "Next.js", "Node.js", "PostgreSQL", "AWS", "Docker"],
+    technologies: ["Laravel", "Vue.js 3", "MySQL", "AWS (S3, Lambda, RDS, EC2)", "Redis", "Docker", "Rollbar", "Jenkins", "Jira", "Git"],
     achievements: [
-      "Reduced application load time by 40%",
-      "Implemented CI/CD pipeline reducing deployment time by 60%",
-      "Led team of 5 developers on major product launch"
+      "Successfully integrated Apple APIs into the Inventory Management System",
+      "Streamlined operations and improved data synchronization",
+      "Implemented performance optimizations for database queries"
     ]
   },
   {
-    title: "Full-Stack Developer",
-    company: "Digital Innovation Hub",
-    location: "Remote",
-    period: "Mar 2020 - Dec 2021",
+    title: "Middle Senior Software Developer",
+    company: "HiTower IT",
+    location: "Malaysia",
+    period: "Dec 2023 - July 2024",
     type: "full-time",
     description: [
-      "Developed responsive web applications using React and TypeScript",
-      "Built RESTful APIs and integrated with third-party services",
-      "Collaborated with UX/UI designers to implement pixel-perfect designs"
+      "Played a pivotal role in transitioning from a monolithic to a microservices architecture, involving architecture design, planning, estimating, development, and documentation",
+      "Led the research POCs and implementation of micro-frontends and Laravel Octane (Swoole, RoadRunner & FrankenPHP) which optimizes the performance and enhancing user experience",
+      "Mentored junior developers, providing guidance on best practices, design patterns, and professional development"
     ],
-    technologies: ["React", "TypeScript", "Node.js", "MongoDB", "Express.js"],
+    technologies: ["PHP (Laravel 11)", "Vue.js 2 & 3", "PostgreSQL", "RabbitMQ", "Docker", "GitLab CI/CD", "Linux", "nginx", "Jira", "Git"],
     achievements: [
-      "Successfully delivered 15+ projects on time",
-      "Improved code quality metrics by implementing automated testing",
-      "Contributed to 50% increase in client satisfaction scores"
+      "Successfully transitioned architecture resulting in substantial improvements in scalability",
+      "Enhanced team technical skills through mentoring and knowledge sharing",
+      "Conducted code reviews to ensure code quality and adherence to best practices"
     ]
   },
   {
-    title: "Frontend Developer",
-    company: "Creative Web Agency",
-    location: "Penang, Malaysia",
-    period: "Jun 2019 - Feb 2020",
-    type: "contract",
+    title: "Software System Development Engineer",
+    company: "Intel Corporation",
+    location: "Malaysia",
+    period: "May 2022 - Dec 2023",
+    type: "full-time",
     description: [
-      "Created interactive and responsive websites for various clients",
-      "Optimized website performance and implemented SEO best practices",
-      "Worked closely with design team to ensure brand consistency"
+      "Implemented highly-efficient packet test framework & SDK for Intel FPGAs product resulting in streamlined testing processes, decreasing significantly manual testing, enhanced product performance, and accelerated time-to-market",
+      "Collaborated with the client to develop a database tracker system, ensuring real-time database health monitoring and preventing unused database situations",
+      "Developed and designed the user interface for Talent Management Web-Based Apps to empower managers visualize and assess the depths of skills and passions of their talents"
     ],
-    technologies: ["HTML5", "CSS3", "JavaScript", "Vue.js", "Sass", "Webpack"],
+    technologies: ["Python", "C++", "R", "P4", "React", "PostgreSQL", "Docker", "K8s", "GraphQL", "neo4j", "Linux", "Git"],
     achievements: [
-      "Delivered 20+ client websites with 98% client satisfaction",
-      "Improved average website performance score to 95+",
-      "Established frontend development standards for the team"
+      "Resulted in increased reliability, significant reduction in unused storage, and enhanced data accuracy",
+      "Accelerated time-to-market for Intel FPGAs products",
+      "Empowered strategic talent assignment through comprehensive UI design"
     ]
   },
   {
-    title: "Junior Web Developer",
-    company: "StartupLab Inc",
-    location: "Johor Bahru, Malaysia", 
-    period: "Sep 2018 - May 2019",
+    title: "Software Engineer",
+    company: "PETRONAS Downstream",
+    location: "Malaysia",
+    period: "Aug 2020 - Feb 2021",
     type: "full-time",
     description: [
-      "Assisted in developing web applications using modern JavaScript frameworks",
-      "Participated in agile development processes and daily standups",
-      "Learned best practices in software development and version control"
+      "Initiated and led the development of the converter system and implemented multiple automation scripts which previously required manual resolution resulting an increase work efficiency and productivity"
     ],
-    technologies: ["JavaScript", "React", "Git", "HTML", "CSS", "Bootstrap"],
+    technologies: ["Python (Flask)", "Bootstrap", "MySQL", "Git"],
     achievements: [
-      "Completed comprehensive training program",
-      "Successfully contributed to 3 major product releases",
-      "Received employee of the month award twice"
+      "Increased work efficiency and productivity through automation",
+      "Eliminated manual processes with automated converter system",
+      "Successfully delivered automation solutions for enterprise operations"
     ]
   }
 ];
@@ -319,7 +317,7 @@ export function ExperienceSection() {
         {/* Summary Stats */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div className="text-center p-6 rounded-lg bg-card border border-border">
-            <div className="text-3xl font-bold text-primary mb-2">5+</div>
+            <div className="text-3xl font-bold text-primary mb-2">4+</div>
             <div className="text-sm font-medium text-foreground">Years Experience</div>
           </div>
           <div className="text-center p-6 rounded-lg bg-card border border-border">
@@ -327,8 +325,8 @@ export function ExperienceSection() {
             <div className="text-sm font-medium text-foreground">Companies</div>
           </div>
           <div className="text-center p-6 rounded-lg bg-card border border-border">
-            <div className="text-3xl font-bold text-primary mb-2">50+</div>
-            <div className="text-sm font-medium text-foreground">Projects Delivered</div>
+            <div className="text-3xl font-bold text-primary mb-2">20+</div>
+            <div className="text-sm font-medium text-foreground">Technologies Used</div>
           </div>
         </div>
       </div>
