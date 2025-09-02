@@ -22,7 +22,7 @@ A modern, high-performance portfolio website built with Next.js 15, TypeScript, 
 - **Tailwind CSS** for styling with custom design system
 - **Static Site Generation (SSG)** for optimal performance
 - **SEO optimized** with Open Graph and Twitter Cards
-- **Contact form** with spam protection (hCaptcha)
+- **Contact form** with spam protection (Cloudflare Turnstile)
 - **Email integration** via Nodemailer
 - **Lazy loading** for optimal performance
 
@@ -93,9 +93,9 @@ EMAIL_USER=your-email@gmail.com
 EMAIL_PASSWORD=your-app-password
 CONTACT_EMAIL=contact@yourdomain.com
 
-# hCaptcha Configuration (Required for spam protection)
-HCAPTCHA_SECRET_KEY=your-secret-key
-NEXT_PUBLIC_HCAPTCHA_SITE_KEY=your-site-key
+# Cloudflare Turnstile Configuration (Required for spam protection)
+TURNSTILE_SECRET_KEY=your-turnstile-secret-key
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=your-turnstile-site-key
 
 # Optional: Analytics
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
@@ -109,12 +109,18 @@ NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
    - Generate password for "Mail"
    - Use this password for `EMAIL_PASSWORD`
 
-### hCaptcha Setup
+### Cloudflare Turnstile Setup
 
-1. Sign up at [hcaptcha.com](https://hcaptcha.com)
-2. Create a new site
-3. Get your Site Key and Secret Key
-4. Add them to your environment variables
+1. Sign up at [cloudflare.com](https://cloudflare.com)
+2. Go to Turnstile dashboard
+3. Create a new site/widget
+4. Get your Site Key and Secret Key
+5. Add them to your environment variables
+
+**Benefits of Turnstile:**
+- Better user experience (invisible when possible)
+- No Google dependencies
+- Free tier with generous limits
 
 ## 🚀 Deployment
 

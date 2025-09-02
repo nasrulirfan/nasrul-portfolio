@@ -5,34 +5,33 @@ import { AnimatedCounter } from "@/components/ui/animated-counter";
 
 const aboutData = {
   name: "Wan Nasrul Irfan",
-  role: "Full-Stack Developer",
+  role: "Senior Software Engineer",
   location: "Malaysia",
-  experience: "5+ years",
+  experience: "4+ years",
   description: [
-    "I'm a passionate full-stack developer with over 5 years of experience building scalable web applications and digital solutions. I specialize in modern JavaScript frameworks, cloud architecture, and creating exceptional user experiences.",
-    "My expertise spans across front-end technologies like React, Next.js, and TypeScript, as well as back-end development with Node.js, Python, and various databases. I'm particularly interested in performance optimization, accessibility, and clean, maintainable code.",
-    "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge through technical writing and mentoring."
+    "I'm a passionate software engineer with over 4 years of experience in full-stack development, specializing in building scalable web applications and enterprise-level systems. I have extensive expertise in microservices architecture, performance optimization, and leading technical teams.",
+    "My technical expertise spans across Laravel, Vue.js, React, Python, and various databases including PostgreSQL and MySQL. I have experience working with major companies like Intel Corporation and PETRONAS, delivering high-impact solutions and mentoring development teams."
   ],
   highlights: [
     {
-      metric: "50+",
-      label: "Projects Completed",
-      description: "Successfully delivered web applications"
+      metric: "4",
+      label: "Companies",
+      description: "Enterprise-level experience"
     },
     {
-      metric: "5+",
+      metric: "4+",
       label: "Years Experience",
-      description: "Professional development experience"
+      description: "Professional software development"
     },
     {
-      metric: "15+",
+      metric: "20+",
       label: "Technologies",
-      description: "Proficient in modern tech stack"
+      description: "Diverse technical expertise"
     },
     {
       metric: "100%",
-      label: "Client Satisfaction",
-      description: "Consistent positive feedback"
+      label: "Project Success",
+      description: "First Class Degree & Dean's List"
     }
   ]
 };
@@ -54,10 +53,10 @@ export function AboutSection() {
           
           <div className="space-y-3">
             <p className="text-muted-foreground leading-relaxed">
-              I&apos;m a passionate full-stack developer with over 5 years of experience building scalable web applications and digital solutions. I specialize in modern JavaScript frameworks, cloud architecture, and creating exceptional user experiences.
+              I&apos;m a passionate software engineer with over 4 years of experience in full-stack development, specializing in building scalable web applications and enterprise-level systems. I have extensive expertise in microservices architecture, performance optimization, and leading technical teams.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              My expertise spans across front-end technologies like React, Next.js, and TypeScript, as well as back-end development with Node.js, Python, and various databases.
+              My technical expertise spans across Laravel, Vue.js, React, Python, and various databases including PostgreSQL and MySQL. I have experience working with major companies like Intel Corporation and PETRONAS, delivering high-impact solutions and mentoring development teams.
             </p>
           </div>
 

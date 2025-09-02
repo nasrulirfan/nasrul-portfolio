@@ -45,9 +45,9 @@ EMAIL_USER=your-email@gmail.com
 EMAIL_PASSWORD=your-app-password
 CONTACT_EMAIL=contact@yourdomain.com
 
-# hCaptcha (Required for contact form)
-HCAPTCHA_SECRET_KEY=your-secret-key
-NEXT_PUBLIC_HCAPTCHA_SITE_KEY=your-site-key
+# Cloudflare Turnstile (Required for contact form)
+TURNSTILE_SECRET_KEY=your-turnstile-secret-key
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=your-turnstile-site-key
 
 # Site URL
 NEXT_PUBLIC_SITE_URL=https://yourdomain.com
@@ -78,16 +78,23 @@ GOOGLE_SITE_VERIFICATION=your-verification-code
    - SendGrid, Mailgun, or AWS SES for production
    - Update `createTransporter()` in `/api/contact/route.ts`
 
-## 🛡️ hCaptcha Setup
+## 🛡️ Cloudflare Turnstile Setup
 
-1. **Create hCaptcha Account**:
-   - Sign up at [hcaptcha.com](https://hcaptcha.com)
-   - Create a new site
+1. **Create Cloudflare Account**:
+   - Sign up at [cloudflare.com](https://cloudflare.com)
+   - Go to Turnstile dashboard
+   - Create a new site/widget
    - Get Site Key and Secret Key
 
 2. **Configure Keys**:
-   - `NEXT_PUBLIC_HCAPTCHA_SITE_KEY` → Frontend (public)
-   - `HCAPTCHA_SECRET_KEY` → Backend (secret)
+   - `NEXT_PUBLIC_TURNSTILE_SITE_KEY` → Frontend (public)
+   - `TURNSTILE_SECRET_KEY` → Backend (secret)
+
+3. **Advantages over hCaptcha**:
+   - Better user experience (invisible verification when possible)
+   - No Google reCAPTCHA dependencies 
+   - Integrated with Cloudflare's security features
+   - Free tier with generous limits
 
 ## 🌐 Custom Domain Setup
 
@@ -164,7 +171,7 @@ nasrul-portfolio/
 - [ ] Update CV file (`public/cv.pdf`)
 - [ ] Add your profile photo
 - [ ] Configure email credentials
-- [ ] Set up hCaptcha
+- [ ] Set up Cloudflare Turnstile
 - [ ] Update social media links
 - [ ] Test contact form locally
 - [ ] Review and update SEO metadata
@@ -183,7 +190,7 @@ Vercel automatically deploys:
 
 1. **Contact Form Not Working**:
    - Check environment variables are set
-   - Verify hCaptcha configuration
+   - Verify Turnstile configuration
    - Check email credentials
 
 2. **Build Failures**:

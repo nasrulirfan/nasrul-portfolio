@@ -8,7 +8,7 @@ const contactFormSchema = z.object({
   email: z.string().email('Invalid email address'),
   subject: z.string().min(5, 'Subject must be at least 5 characters').max(200, 'Subject too long'),
   message: z.string().min(10, 'Message must be at least 10 characters').max(1000, 'Message too long'),
-  hcaptchaToken: z.string().min(1, 'Captcha verification required'),
+  turnstileToken: z.string().min(1, 'Captcha verification required'),
 });
 
 // Rate limiting storage (in production, use Redis or database)
@@ -35,28 +35,32 @@ function checkRateLimit(ip: string): boolean {
   return true;
 }
 
-// Verify hCaptcha token
-async function verifyHCaptcha(token: string): Promise<boolean> {
-  const secret = process.env.HCAPTCHA_SECRET_KEY;
+// Verify Cloudflare Turnstile token
+async function verifyTurnstile(token: string, clientIP?: string): Promise<boolean> {
+  const secret = process.env.TURNSTILE_SECRET_KEY;
   
   if (!secret) {
-    console.error('hCaptcha secret key not configured');
+    console.error('Turnstile secret key not configured');
     return false;
   }
 
   try {
-    const response = await fetch('https://hcaptcha.com/siteverify', {
+    const formData = new FormData();
+    formData.append('secret', secret);
+    formData.append('response', token);
+    if (clientIP) {
+      formData.append('remoteip', clientIP);
+    }
+
+    const response = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: `response=${token}&secret=${secret}`,
+      body: formData,
     });
 
     const data = await response.json();
     return data.success === true;
   } catch (error) {
-    console.error('hCaptcha verification error:', error);
+    console.error('Turnstile verification error:', error);
     return false;
   }
 }
@@ -137,8 +141,8 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const validatedData = contactFormSchema.parse(body);
 
-    // Verify hCaptcha
-    const isCaptchaValid = await verifyHCaptcha(validatedData.hcaptchaToken);
+    // Verify Turnstile
+    const isCaptchaValid = await verifyTurnstile(validatedData.turnstileToken, ip);
     if (!isCaptchaValid) {
       return NextResponse.json(
         { error: 'Captcha verification failed. Please try again.' },

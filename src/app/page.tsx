@@ -61,12 +61,12 @@ export default function Home() {
             <AnimatedSection animation="fade-in" delay={0.4}>
               <div className="flex flex-wrap justify-center gap-3 mb-8 max-w-2xl mx-auto">
                 {[
-                  { name: "React", color: "from-blue-400 to-blue-600" },
-                  { name: "Next.js", color: "from-gray-700 to-gray-900" },
-                  { name: "TypeScript", color: "from-blue-600 to-blue-800" },
                   { name: "Laravel", color: "from-red-500 to-red-700" },
                   { name: "Vue.js", color: "from-green-400 to-green-600" },
-                  { name: "Node.js", color: "from-green-500 to-green-700" },
+                  { name: "React", color: "from-blue-400 to-blue-600" },
+                  { name: "Python", color: "from-yellow-500 to-yellow-700" },
+                  { name: "PHP", color: "from-purple-500 to-purple-700" },
+                  { name: "PostgreSQL", color: "from-blue-600 to-blue-800" },
                 ].map((tech, index) => (
                   <div
                     key={tech.name}
@@ -94,15 +94,15 @@ export default function Home() {
             <AnimatedSection animation="slide-up" delay={0.7}>
               <div className="grid grid-cols-3 gap-8 max-w-md mx-auto mb-8">
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">50+</div>
-                  <div className="text-xs text-muted-foreground">Projects</div>
+                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">4</div>
+                  <div className="text-xs text-muted-foreground">Companies</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">5+</div>
+                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">4+</div>
                   <div className="text-xs text-muted-foreground">Years</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">15+</div>
+                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">20+</div>
                   <div className="text-xs text-muted-foreground">Technologies</div>
                 </div>
               </div>

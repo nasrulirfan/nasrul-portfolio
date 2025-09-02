@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input, Textarea, Label } from "@/components/ui/form";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 interface FormData {
   name: string;
@@ -91,7 +91,7 @@ export function ContactForm() {
         },
         body: JSON.stringify({
           ...formData,
-          hcaptchaToken: captchaToken,
+          turnstileToken: captchaToken,
         }),
       });
 
@@ -129,7 +129,7 @@ export function ContactForm() {
     }
   };
 
-  const hcaptchaSiteKey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || "";
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "";
 
   if (isSuccess) {
     return (
@@ -252,13 +252,17 @@ export function ContactForm() {
             )}
           </div>
 
-          {hcaptchaSiteKey && (
+          {turnstileSiteKey && (
             <div className="flex justify-center">
-              <HCaptcha
-                sitekey={hcaptchaSiteKey}
-                onVerify={setCaptchaToken}
+              <Turnstile
+                siteKey={turnstileSiteKey}
+                onSuccess={setCaptchaToken}
                 onExpire={() => setCaptchaToken("")}
                 onError={() => setCaptchaToken("")}
+                options={{
+                  theme: "auto",
+                  size: "normal",
+                }}
               />
             </div>
           )}
