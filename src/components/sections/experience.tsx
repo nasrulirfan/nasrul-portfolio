@@ -317,7 +317,7 @@ export function ExperienceSection() {
         {/* Summary Stats */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div className="text-center p-6 rounded-lg bg-card border border-border">
-            <div className="text-3xl font-bold text-primary mb-2">4+</div>
+            <div className="text-3xl font-bold text-primary mb-2">5+</div>
             <div className="text-sm font-medium text-foreground">Years Experience</div>
           </div>
           <div className="text-center p-6 rounded-lg bg-card border border-border">

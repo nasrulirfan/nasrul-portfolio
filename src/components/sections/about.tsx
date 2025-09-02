@@ -7,9 +7,9 @@ const aboutData = {
   name: "Wan Nasrul Irfan",
   role: "Senior Software Engineer",
   location: "Malaysia",
-  experience: "4+ years",
+  experience: "5+ years",
   description: [
-    "I'm a passionate software engineer with over 4 years of experience in full-stack development, specializing in building scalable web applications and enterprise-level systems. I have extensive expertise in microservices architecture, performance optimization, and leading technical teams.",
+    "I'm a passionate software engineer with over 5 years of experience in full-stack development, specializing in building scalable web applications and enterprise-level systems. I have extensive expertise in microservices architecture, performance optimization, and leading technical teams.",
     "My technical expertise spans across Laravel, Vue.js, React, Python, and various databases including PostgreSQL and MySQL. I have experience working with major companies like Intel Corporation and PETRONAS, delivering high-impact solutions and mentoring development teams."
   ],
   highlights: [
@@ -19,7 +19,7 @@ const aboutData = {
       description: "Enterprise-level experience"
     },
     {
-      metric: "4+",
+      metric: "5+",
       label: "Years Experience",
       description: "Professional software development"
     },
@@ -31,7 +31,7 @@ const aboutData = {
     {
       metric: "100%",
       label: "Project Success",
-      description: "First Class Degree & Dean's List"
+      description: "Enterprise-level project delivery"
     }
   ]
 };
@@ -53,7 +53,7 @@ export function AboutSection() {
           
           <div className="space-y-3">
             <p className="text-muted-foreground leading-relaxed">
-              I&apos;m a passionate software engineer with over 4 years of experience in full-stack development, specializing in building scalable web applications and enterprise-level systems. I have extensive expertise in microservices architecture, performance optimization, and leading technical teams.
+              I&apos;m a passionate software engineer with over 5 years of experience in full-stack development, specializing in building scalable web applications and enterprise-level systems. I have extensive expertise in microservices architecture, performance optimization, and leading technical teams.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               My technical expertise spans across Laravel, Vue.js, React, Python, and various databases including PostgreSQL and MySQL. I have experience working with major companies like Intel Corporation and PETRONAS, delivering high-impact solutions and mentoring development teams.

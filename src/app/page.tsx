@@ -98,7 +98,7 @@ export default function Home() {
                   <div className="text-xs text-muted-foreground">Companies</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">4+</div>
+                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">5+</div>
                   <div className="text-xs text-muted-foreground">Years</div>
                 </div>
                 <div className="text-center">
