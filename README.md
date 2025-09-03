@@ -4,7 +4,7 @@ A modern, high-performance portfolio website built with Next.js 15, TypeScript, 
 
 ## 🚀 Live Demo
 
-[https://nasrul.dev](https://nasrul.dev) *(Replace with your actual domain)*
+[nasrulirfan.dev](https://nasrulirfan.dev)
 
 ## ✨ Features
 
@@ -195,22 +195,6 @@ public/
 - **Structured Data**: Modify `src/components/structured-data.tsx`
 - **Social Media**: Update Open Graph images and metadata
 
-## 🧪 Testing
-
-```bash
-# Type checking
-npm run typecheck
-
-# Linting
-npm run lint
-
-# Build test
-npm run build
-
-# Preview production build
-npm run preview
-```
-
 ## 📈 Performance
 
 - **Lighthouse Score**: 100/100/100/100 (Performance, Accessibility, Best Practices, SEO)
@@ -228,24 +212,9 @@ npm run preview
 - **High contrast ratios** for text and interactive elements
 - **Semantic HTML** structure
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Support
-
-For questions or support, please [open an issue](https://github.com/nasrulirfan/portfolio/issues) or contact me directly.
-
 ---
 
 **Built with ❤️ by Wan  Nasrul Irfan**
