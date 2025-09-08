@@ -67,7 +67,7 @@ export function ContactForm() {
       newErrors.message = "Message must be at least 10 characters";
     }
 
-    if (!captchaToken) {
+    if (!isDevelopment && turnstileSiteKey && !captchaToken) {
       newErrors.general = "Please complete the captcha verification";
     }
 
@@ -91,7 +91,7 @@ export function ContactForm() {
         },
         body: JSON.stringify({
           ...formData,
-          turnstileToken: captchaToken,
+          turnstileToken: captchaToken || (process.env.NODE_ENV !== 'production' ? 'development-bypass' : undefined),
         }),
       });
 
@@ -130,6 +130,7 @@ export function ContactForm() {
   };
 
   const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "";
+  const isDevelopment = process.env.NODE_ENV !== 'production';
 
   if (isSuccess) {
     return (
@@ -252,7 +253,7 @@ export function ContactForm() {
             )}
           </div>
 
-          {turnstileSiteKey && (
+          {!isDevelopment && turnstileSiteKey && (
             <div className="flex justify-center">
               <Turnstile
                 siteKey={turnstileSiteKey}
@@ -271,7 +272,7 @@ export function ContactForm() {
             type="submit" 
             className="w-full" 
             size="lg"
-            disabled={isSubmitting || !captchaToken}
+            disabled={isSubmitting || (!isDevelopment && !!turnstileSiteKey && !captchaToken)}
           >
             {isSubmitting ? (
               <div className="flex items-center gap-2">

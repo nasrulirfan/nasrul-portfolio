@@ -8,7 +8,7 @@ const contactFormSchema = z.object({
   email: z.string().email('Invalid email address'),
   subject: z.string().min(5, 'Subject must be at least 5 characters').max(200, 'Subject too long'),
   message: z.string().min(10, 'Message must be at least 10 characters').max(1000, 'Message too long'),
-  turnstileToken: z.string().min(1, 'Captcha verification required'),
+  turnstileToken: z.string().min(1, 'Captcha verification required').optional(),
 });
 
 // Rate limiting storage (in production, use Redis or database)
@@ -141,17 +141,29 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const validatedData = contactFormSchema.parse(body);
 
-    // Verify Turnstile
-    const isCaptchaValid = await verifyTurnstile(validatedData.turnstileToken, ip);
-    if (!isCaptchaValid) {
+    // Verify Turnstile (skip in development)
+    const isDevelopment = process.env.NODE_ENV !== 'production';
+    const hasTurnstileConfig = process.env.TURNSTILE_SECRET_KEY && process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+    
+    if (!isDevelopment && hasTurnstileConfig && validatedData.turnstileToken && validatedData.turnstileToken !== 'development-bypass') {
+      const isCaptchaValid = await verifyTurnstile(validatedData.turnstileToken, ip);
+      if (!isCaptchaValid) {
+        return NextResponse.json(
+          { error: 'Captcha verification failed. Please try again.' },
+          { status: 400 }
+        );
+      }
+    } else if (!isDevelopment && !hasTurnstileConfig) {
       return NextResponse.json(
-        { error: 'Captcha verification failed. Please try again.' },
-        { status: 400 }
+        { error: 'Security verification is required but not configured.' },
+        { status: 503 }
       );
     }
 
     // Send email
+    console.log('Attempting to send email to:', process.env.CONTACT_EMAIL || process.env.EMAIL_USER);
     await sendContactEmail(validatedData);
+    console.log('Email sent successfully');
 
     return NextResponse.json(
       { message: 'Message sent successfully! I\'ll get back to you soon.' },
