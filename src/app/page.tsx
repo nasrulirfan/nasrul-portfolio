@@ -12,6 +12,7 @@ import { ContactSection } from "@/components/sections/contact";
 import { SkipLink } from "@/components/ui/skip-link";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -31,6 +32,23 @@ export default function Home() {
           </div>
 
           <div className="text-center max-w-6xl mx-auto relative">
+            {/* Memoji */}
+            <AnimatedSection animation="fade-in" delay={0.05}>
+              <div className="flex justify-center mb-6">
+                <div className="relative group">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-lg group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all duration-500"></div>
+                  <Image
+                    src="/nasrul-memoji-400.png"
+                    alt="Nasrul's Memoji"
+                    width={120}
+                    height={120}
+                    className="relative rounded-full border-4 border-primary/20 group-hover:scale-105 transition-transform duration-300 shadow-lg"
+                    priority
+                  />
+                </div>
+              </div>
+            </AnimatedSection>
+
             {/* Greeting */}
             <AnimatedSection animation="fade-in" delay={0.1}>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6 border border-primary/20">
