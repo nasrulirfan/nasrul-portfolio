@@ -19,7 +19,7 @@ interface SkillCategory {
 
 const skillsData: SkillCategory[] = [
   {
-    title: "Frontend Development",
+    title: "Frontend Engineering",
     icon: "🎨",
     color: "from-blue-500 to-cyan-500",
     skills: [
@@ -30,70 +30,75 @@ const skillsData: SkillCategory[] = [
       { name: "HTML5", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
       { name: "CSS3", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
       { name: "Tailwind", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
-      { name: "Bootstrap", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" },
+      { name: "Bootstrap", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" }
     ]
   },
   {
-    title: "Backend Development",
+    title: "Backend & Languages",
     icon: "⚙️",
     color: "from-green-500 to-emerald-500",
     skills: [
-      { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
       { name: "Laravel", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" },
+      { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
       { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" },
       { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
       { name: "Flask", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" },
+      { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
       { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" },
       { name: "R", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg" },
-      { name: "GraphQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg" },
+      { name: "GraphQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg" }
     ]
   },
   {
-    title: "Database & Storage",
+    title: "Data & Messaging",
     icon: "🗄️",
     color: "from-purple-500 to-violet-500",
     skills: [
       { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
       { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
+      { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
       { name: "Redis", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" },
-      { name: "Neo4j", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neo4j/neo4j-original.svg" },
       { name: "RabbitMQ", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg" },
+      { name: "Neo4j", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neo4j/neo4j-original.svg" }
     ]
   },
   {
-    title: "DevOps & Cloud",
+    title: "Cloud & DevOps",
     icon: "☁️",
     color: "from-orange-500 to-red-500",
     skills: [
       { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" },
-      { name: "Vercel", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" },
       { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
       { name: "Kubernetes", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" },
       { name: "GitLab CI/CD", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" },
       { name: "Jenkins", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" },
+      { name: "Vercel", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" },
       { name: "Linux", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" },
+      { name: "nginx", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" }
+    ]
+  },
+  {
+    title: "Monitoring & Tooling",
+    icon: "🛡️",
+    color: "from-pink-500 to-rose-500",
+    skills: [
+      { name: "Sentry", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v13/icons/sentry.svg" },
+      { name: "Rollbar", logo: "https://avatars.githubusercontent.com/u/3219584?s=200&v=4" },
+      { name: "Inspector", logo: "https://avatars.githubusercontent.com/u/11809173?s=200&v=4" },
+      { name: "Stripe", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v13/icons/stripe.svg" },
+      { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
+      { name: "Bash Scripting", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" },
+      { name: "Jira", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" }
     ]
   },
   {
     title: "AI-Related Development",
     icon: "🤖",
-    color: "from-pink-500 to-rose-500",
+    color: "from-amber-500 to-orange-500",
     skills: [
       { name: "Claude Code", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v13/icons/anthropic.svg" },
       { name: "Kiro", logo: "https://avatars.githubusercontent.com/u/150204825?s=200&v=4" },
-    ]
-  },
-  {
-    title: "Tools & Technologies",
-    icon: "🛠️",
-    color: "from-indigo-500 to-blue-500",
-    skills: [
-      { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
-      { name: "Bash Scripting", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" },
-      { name: "Jira", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" },
-      { name: "nginx", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" },
-      { name: "Sentry", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v13/icons/sentry.svg" },
-      { name: "Rollbar", logo: "https://avatars.githubusercontent.com/u/3219584?s=200&v=4" },
+      { name: "Codex", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v13/icons/openai.svg" }
     ]
   }
 ];
@@ -173,9 +178,20 @@ export function SkillsSection() {
           </Heading>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "Microservices Architecture", "Technical Documentation", "Code Review", "Mentoring", 
-              "Performance Optimization", "Database Optimization", "System Architecture", "Problem Solving",
-              "API Integration", "Requirements Gathering", "Team Leadership", "Agile Methodologies"
+              "Microservices Architecture",
+              "CI/CD Automation (Jenkins & GitLab)",
+              "Stripe Integrations",
+              "P4 Networking DSL",
+              "Technical Documentation",
+              "Code Review & Mentoring",
+              "Performance Optimization",
+              "Database Optimization",
+              "System Architecture",
+              "API Integration",
+              "Requirements Gathering",
+              "Team Leadership",
+              "Agile Methodologies",
+              "Observability (Sentry, Rollbar, Inspector)"
             ].map((skill, index) => (
               <span
                 key={index}

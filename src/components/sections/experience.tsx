@@ -18,21 +18,43 @@ interface Experience {
 
 const experienceData: Experience[] = [
   {
+    title: "Technical Team Lead",
+    company: "Leo AI",
+    location: "Remote",
+    period: "Aug 2025 - Present",
+    type: "freelance",
+    description: [
+      "Architected and delivered a full-stack platform from the ground up using Next.js, MongoDB, Stripe, and Vercel to automate enterprise-level service delivery",
+      "Led the build-out of an AI-powered solution that digitizes and streamlines traditionally expensive compliance consulting workflows",
+      "Established comprehensive monitoring with Sentry and proactive alerting to preserve uptime and data integrity",
+      "Maintained a disciplined Git workflow and CI/CD automation to accelerate delivery and uphold code quality"
+    ],
+    technologies: ["Next.js", "Node.js", "React", "MongoDB", "AWS", "Stripe", "Vercel", "Redis", "Docker", "Sentry", "Git", "Agile"],
+    achievements: [
+      "Delivered the company’s first AI-native compliance automation platform",
+      "Reduced operational risk through observability-first engineering practices",
+      "Improved deployment velocity with streamlined Git-based workflows"
+    ]
+  },
+  {
     title: "Senior Software Engineer",
     company: "CompAsia",
     location: "Malaysia",
     period: "July 2024 - Present",
     type: "full-time",
     description: [
-      "Led rapid deployment of company-wide e-Invoicing system for Renew+ using Laravel modules to meet tight deadlines",
-      "Contributed full stack expertise to Inventory Management System, driving requirements gathering, conducting thorough code reviews, and creating comprehensive technical documentation",
-      "Optimized MySQL queries and managed Redis queues and caching to boost performance"
+      "Spearheaded the rapid development and rollout of a company-wide e-Invoicing system by architecting a modular Laravel solution under aggressive timelines",
+      "Designed and implemented AWS infrastructure (ALB, EC2, nginx, S3, MongoDB Atlas, CloudFront, Docker) plus Jenkins-based CI/CD pipelines for a new MDM initiative",
+      "Led end-to-end delivery of the Inventory Management System—from requirements and design through implementation, documentation, and technical reviews",
+      "Established Jenkins CI/CD pipelines for the Inventory Management System and Apple Mobile Device Management System to automate build and deployment flows",
+      "Engineered Apple API integrations that streamlined inventory data synchronization and core operational workflows",
+      "Boosted application performance through complex MySQL query optimization and robust Redis caching and queueing strategies"
     ],
-    technologies: ["Laravel", "Vue.js 3", "MySQL", "AWS (S3, Lambda, RDS, EC2)", "Redis", "Docker", "Rollbar", "Jenkins", "Jira", "Git"],
+    technologies: ["Laravel", "Vue.js 3", "MySQL", "MongoDB", "AWS (ALB, EC2, S3, CloudFront)", "Redis", "Docker", "nginx", "Rollbar", "Jenkins", "Jira", "Git"],
     achievements: [
-      "Successfully integrated Apple APIs into the Inventory Management System",
-      "Streamlined operations and improved data synchronization",
-      "Implemented performance optimizations for database queries"
+      "Delivered enterprise-wide e-Invoicing and MDM systems on time despite accelerated schedules",
+      "Improved deployment reliability with purpose-built Jenkins pipelines",
+      "Enhanced performance and data accuracy through database and caching optimizations"
     ]
   },
   {
@@ -42,15 +64,15 @@ const experienceData: Experience[] = [
     period: "Dec 2023 - July 2024",
     type: "full-time",
     description: [
-      "Played a pivotal role in transitioning from a monolithic to a microservices architecture, involving architecture design, planning, estimating, development, and documentation",
-      "Led the research POCs and implementation of micro-frontends and Laravel Octane (Swoole, RoadRunner & FrankenPHP) which optimizes the performance and enhancing user experience",
-      "Mentored junior developers, providing guidance on best practices, design patterns, and professional development"
+      "Played a pivotal role in the move from a monolithic platform to microservices, covering architecture design, estimation, development, and documentation to unlock scalability",
+      "Pioneered performance optimizations by researching and implementing micro-frontends and Laravel Octane (Swoole, RoadRunner, FrankenPHP) to elevate UX",
+      "Established a culture of code quality through rigorous reviews while mentoring junior developers on design patterns and professional growth"
     ],
-    technologies: ["PHP (Laravel 11)", "Vue.js 2 & 3", "PostgreSQL", "RabbitMQ", "Docker", "GitLab CI/CD", "Linux", "nginx", "Jira", "Git"],
+    technologies: ["PHP (Laravel 11)", "Vue.js 2 & 3", "PostgreSQL", "RabbitMQ", "Docker", "GitLab CI/CD", "Linux", "nginx", "Jira", "Git", "Agile"],
     achievements: [
-      "Successfully transitioned architecture resulting in substantial improvements in scalability",
-      "Enhanced team technical skills through mentoring and knowledge sharing",
-      "Conducted code reviews to ensure code quality and adherence to best practices"
+      "Unlocked substantial scalability wins via microservice adoption",
+      "Elevated user experience with micro-frontend and Octane initiatives",
+      "Raised overall engineering bar through structured mentoring and reviews"
     ]
   },
   {
@@ -60,15 +82,16 @@ const experienceData: Experience[] = [
     period: "May 2022 - Dec 2023",
     type: "full-time",
     description: [
-      "Implemented highly-efficient packet test framework & SDK for Intel FPGAs product resulting in streamlined testing processes, decreasing significantly manual testing, enhanced product performance, and accelerated time-to-market",
-      "Collaborated with the client to develop a database tracker system, ensuring real-time database health monitoring and preventing unused database situations",
-      "Developed and designed the user interface for Talent Management Web-Based Apps to empower managers visualize and assess the depths of skills and passions of their talents"
+      "Developed a high-efficiency Python-based packet testing framework and SDK for Intel FPGA products, slashing manual effort and accelerating time-to-market",
+      "Engineered a real-time database health monitoring system with Python, PostgreSQL, and Docker to prevent unused database situations and improve reliability",
+      "Identified and resolved performance bottlenecks that significantly reduced unused storage and boosted system stability",
+      "Designed and built a talent management web application in React and GraphQL that helps managers align projects with employee skills"
     ],
     technologies: ["Python", "C++", "R", "P4", "React", "PostgreSQL", "Docker", "K8s", "GraphQL", "neo4j", "Linux", "Git"],
     achievements: [
-      "Resulted in increased reliability, significant reduction in unused storage, and enhanced data accuracy",
-      "Accelerated time-to-market for Intel FPGAs products",
-      "Empowered strategic talent assignment through comprehensive UI design"
+      "Accelerated FPGA release cycles with automation-first testing",
+      "Protected data accuracy through proactive monitoring solutions",
+      "Enabled strategic staffing decisions via bespoke talent tools"
     ]
   },
   {
