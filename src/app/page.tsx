@@ -112,8 +112,8 @@ export default function Home() {
             <AnimatedSection animation="slide-up" delay={0.7}>
               <div className="grid grid-cols-3 gap-8 max-w-md mx-auto mb-8">
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">4</div>
-                  <div className="text-xs text-muted-foreground">Companies</div>
+                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">12+</div>
+                  <div className="text-xs text-muted-foreground">Enterprise Projects</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-primary mb-1">5+</div>

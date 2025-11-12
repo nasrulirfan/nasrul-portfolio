@@ -14,9 +14,9 @@ const aboutData = {
   ],
   highlights: [
     {
-      metric: "4",
-      label: "Companies",
-      description: "Enterprise-level experience"
+      metric: "12+",
+      label: "Enterprise Projects",
+      description: "Large-scale deliveries completed"
     },
     {
       metric: "5+",
