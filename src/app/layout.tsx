@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: "Wan Nasrul Irfan - Senior Software Engineer",
     template: "%s | Wan Nasrul Irfan - Senior Software Engineer"
   },
-  description: "Senior software engineer with 5+ years of experience building full-stack platforms, microservices, and AI-assisted delivery workflows with Python, Laravel, Next.js, and AWS.",
+  description: "Senior software engineer with 7+ years of experience building full-stack platforms, microservices, and AI-assisted delivery workflows with Python, Laravel, Next.js, and AWS.",
   keywords: [
     "Wan Nasrul Irfan",
     "Senior Software Engineer",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     url: "https://nasrul.dev",
     siteName: "Wan Nasrul Irfan Portfolio",
     title: "Wan Nasrul Irfan - Senior Software Engineer",
-    description: "Senior software engineer with 5+ years of experience building full-stack platforms, microservices, and AI-assisted delivery workflows with Python, Laravel, Next.js, and AWS.",
+    description: "Senior software engineer with 7+ years of experience building full-stack platforms, microservices, and AI-assisted delivery workflows with Python, Laravel, Next.js, and AWS.",
     images: [
       {
         url: "/og-image.png",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Wan Nasrul Irfan - Senior Software Engineer",
-    description: "Senior software engineer with 5+ years of experience building full-stack platforms, microservices, and AI-assisted delivery workflows.",
+    description: "Senior software engineer with 7+ years of experience building full-stack platforms, microservices, and AI-assisted delivery workflows.",
     images: ["/og-image.png"],
     creator: "@nasrulirfan",
   },

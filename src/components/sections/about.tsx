@@ -7,9 +7,9 @@ const aboutData = {
   name: "Wan Nasrul Irfan",
   role: "Senior Software Engineer",
   location: "Malaysia",
-  experience: "5+ years",
+  experience: "7+ years",
   description: [
-    "I'm a senior software engineer with 5+ years of experience designing scalable full-stack products, internal platforms, and microservice systems. My recent work spans platform engineering, cloud infrastructure, CI/CD, and performance tuning across product and enterprise environments.",
+    "I'm a senior software engineer with 7+ years of experience designing scalable full-stack products, internal platforms, and microservice systems. My recent work spans platform engineering, cloud infrastructure, CI/CD, and performance tuning across product and enterprise environments.",
     "I work across Python, PHP, JavaScript, and modern frameworks including Laravel, Next.js, Node.js, Vue, and React. More recently, I've been applying AI-assisted workflows and tooling to accelerate delivery, improve code quality, and help teams ship more consistently."
   ],
   highlights: [

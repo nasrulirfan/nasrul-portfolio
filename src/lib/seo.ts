@@ -18,7 +18,7 @@ export function generateSEO({
   noIndex = false,
 }: SEOProps = {}): Metadata {
   const defaultTitle = "Wan Nasrul Irfan - Senior Software Engineer";
-  const defaultDescription = "Senior software engineer with 5+ years of experience building full-stack platforms, microservices, and AI-assisted delivery workflows with Python, Laravel, Next.js, and AWS.";
+  const defaultDescription = "Senior software engineer with 7+ years of experience building full-stack platforms, microservices, and AI-assisted delivery workflows with Python, Laravel, Next.js, and AWS.";
   
   const seoTitle = title ? `${title} | ${defaultTitle}` : defaultTitle;
   const seoDescription = description || defaultDescription;

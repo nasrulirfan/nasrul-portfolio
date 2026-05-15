@@ -106,7 +106,7 @@ export default function Home() {
                   AI-assisted delivery workflows
                 </span>{' '}
                 with{' '}
-                <span className="text-primary font-semibold">5+ years</span> of expertise in{' '}
+                <span className="text-primary font-semibold">7+ years</span> of expertise in{' '}
                 product, platform, and enterprise engineering
               </p>
             </AnimatedSection>
