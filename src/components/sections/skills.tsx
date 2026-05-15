@@ -26,6 +26,7 @@ const skillsData: SkillCategory[] = [
       { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
       { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
       { name: "Vue.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" },
+      { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
       { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
       { name: "HTML5", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
       { name: "CSS3", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
@@ -38,10 +39,12 @@ const skillsData: SkillCategory[] = [
     icon: "⚙️",
     color: "from-green-500 to-emerald-500",
     skills: [
+      { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
       { name: "Laravel", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" },
       { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+      { name: "NestJS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg" },
       { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" },
-      { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+      { name: "FastMCP", logo: "/file.svg" },
       { name: "Flask", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" },
       { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
       { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" },
@@ -70,11 +73,14 @@ const skillsData: SkillCategory[] = [
       { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" },
       { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
       { name: "Kubernetes", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" },
+      { name: "Terraform", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" },
+      { name: "GitHub Actions", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" },
       { name: "GitLab CI/CD", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" },
       { name: "Jenkins", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" },
-      { name: "Vercel", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" },
+      { name: "Coolify", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v13/icons/coolify.svg" },
       { name: "Linux", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" },
-      { name: "nginx", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" }
+      { name: "nginx", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" },
+      { name: "Cloudflare", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg" }
     ]
   },
   {
@@ -82,12 +88,13 @@ const skillsData: SkillCategory[] = [
     icon: "🛡️",
     color: "from-pink-500 to-rose-500",
     skills: [
+      { name: "Datadog", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v13/icons/datadog.svg" },
       { name: "Sentry", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v13/icons/sentry.svg" },
       { name: "Rollbar", logo: "https://avatars.githubusercontent.com/u/3219584?s=200&v=4" },
-      { name: "Inspector", logo: "https://avatars.githubusercontent.com/u/11809173?s=200&v=4" },
       { name: "Stripe", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v13/icons/stripe.svg" },
+      { name: "HitPay", logo: "/file.svg" },
       { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
-      { name: "Bash Scripting", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" },
+      { name: "Cursor", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v13/icons/cursor.svg" },
       { name: "Jira", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" }
     ]
   },
@@ -97,7 +104,7 @@ const skillsData: SkillCategory[] = [
     color: "from-amber-500 to-orange-500",
     skills: [
       { name: "Claude Code", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v13/icons/anthropic.svg" },
-      { name: "Kiro", logo: "https://avatars.githubusercontent.com/u/150204825?s=200&v=4" },
+      { name: "Cursor", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v13/icons/cursor.svg" },
       { name: "Codex", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v13/icons/openai.svg" }
     ]
   }
@@ -158,7 +165,7 @@ export function SkillsSection() {
             Skills & Technologies
           </Heading>
           <p className="text-base text-muted-foreground max-w-3xl mx-auto">
-            Technologies I work with to build modern, scalable applications.
+            Technologies I use across platform engineering, full-stack delivery, and AI-assisted software workflows.
           </p>
         </div>
 
@@ -179,8 +186,12 @@ export function SkillsSection() {
           <div className="flex flex-wrap justify-center gap-3">
             {[
               "Microservices Architecture",
-              "CI/CD Automation (Jenkins & GitLab)",
-              "Stripe Integrations",
+              "GitOps & Terraform Workflows",
+              "CI/CD Automation",
+              "AI-Assisted Delivery",
+              "Platform API Design",
+              "Infrastructure Cost Optimization",
+              "Stripe & HitPay Integrations",
               "P4 Networking DSL",
               "Technical Documentation",
               "Code Review & Mentoring",
@@ -191,7 +202,7 @@ export function SkillsSection() {
               "Requirements Gathering",
               "Team Leadership",
               "Agile Methodologies",
-              "Observability (Sentry, Rollbar, Inspector)"
+              "Observability (Datadog, Sentry, Rollbar)"
             ].map((skill, index) => (
               <span
                 key={index}

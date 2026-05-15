@@ -9,14 +9,14 @@ const aboutData = {
   location: "Malaysia",
   experience: "5+ years",
   description: [
-    "I'm a passionate software engineer with over 5 years of experience in full-stack development, specializing in building scalable web applications and enterprise-level systems. I have extensive expertise in microservices architecture, performance optimization, and leading technical teams.",
-    "My technical expertise spans across Laravel, Vue.js, React, Python, and various databases including PostgreSQL and MySQL. I have experience working with major companies like Intel Corporation and PETRONAS, delivering high-impact solutions and mentoring development teams."
+    "I'm a senior software engineer with 5+ years of experience designing scalable full-stack products, internal platforms, and microservice systems. My recent work spans platform engineering, cloud infrastructure, CI/CD, and performance tuning across product and enterprise environments.",
+    "I work across Python, PHP, JavaScript, and modern frameworks including Laravel, Next.js, Node.js, Vue, and React. More recently, I've been applying AI-assisted workflows and tooling to accelerate delivery, improve code quality, and help teams ship more consistently."
   ],
   highlights: [
     {
-      metric: "12+",
-      label: "Enterprise Projects",
-      description: "Large-scale deliveries completed"
+      metric: "7",
+      label: "Career Roles",
+      description: "Across product, platform, and freelance work"
     },
     {
       metric: "5+",
@@ -24,14 +24,14 @@ const aboutData = {
       description: "Professional software development"
     },
     {
-      metric: "20+",
+      metric: "25+",
       label: "Technologies",
       description: "Diverse technical expertise"
     },
     {
-      metric: "100%",
-      label: "Project Success",
-      description: "Enterprise-level project delivery"
+      metric: "3",
+      label: "Leadership Roles",
+      description: "Leading teams, projects, and platform delivery"
     }
   ]
 };
@@ -52,12 +52,11 @@ export function AboutSection() {
           </div>
           
           <div className="space-y-3">
-            <p className="text-muted-foreground leading-relaxed">
-              I&apos;m a passionate software engineer with over 5 years of experience in full-stack development, specializing in building scalable web applications and enterprise-level systems. I have extensive expertise in microservices architecture, performance optimization, and leading technical teams.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              My technical expertise spans across Laravel, Vue.js, React, Python, and various databases including PostgreSQL and MySQL. I have experience working with major companies like Intel Corporation and PETRONAS, delivering high-impact solutions and mentoring development teams.
-            </p>
+            {aboutData.description.map((paragraph) => (
+              <p key={paragraph} className="text-muted-foreground leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 pt-2">

@@ -17,8 +17,8 @@ export function generateSEO({
   ogImage = "/og-image.png",
   noIndex = false,
 }: SEOProps = {}): Metadata {
-  const defaultTitle = "Wan Nasrul Irfan - Full-Stack Developer";
-  const defaultDescription = "Passionate full-stack developer with 5+ years of experience building scalable web applications. Specializing in React, Next.js, Node.js, and modern web technologies.";
+  const defaultTitle = "Wan Nasrul Irfan - Senior Software Engineer";
+  const defaultDescription = "Senior software engineer with 5+ years of experience building full-stack platforms, microservices, and AI-assisted delivery workflows with Python, Laravel, Next.js, and AWS.";
   
   const seoTitle = title ? `${title} | ${defaultTitle}` : defaultTitle;
   const seoDescription = description || defaultDescription;
@@ -31,17 +31,17 @@ export function generateSEO({
     description: seoDescription,
     keywords: [
       "Wan Nasrul Irfan",
-      "Full-Stack Developer",
-      "React Developer",
+      "Senior Software Engineer",
+      "Platform Engineer",
+      "Python Developer",
+      "Laravel Developer",
       "Next.js Developer",
-      "TypeScript Developer",
-      "Node.js Developer",
-      "Web Developer Malaysia",
-      "Frontend Developer",
-      "Backend Developer",
-      "JavaScript Developer",
+      "AWS Developer",
+      "Kubernetes Engineer",
+      "Software Engineer Malaysia",
+      "AI-Assisted Software Engineering",
+      "Microservices Architecture",
       "Software Engineer",
-      "Web Development",
       "Portfolio",
       ...keywords,
     ],
@@ -95,27 +95,29 @@ export function generatePersonStructuredData() {
     "@type": "Person",
     name: "Wan Nasrul Irfan",
     url: "https://nasrul.dev",
-    jobTitle: "Full-Stack Developer",
-    description: "Passionate full-stack developer with 5+ years of experience building scalable web applications.",
-    image: "https://nasrul.dev/profile-image.jpg",
+    jobTitle: "Senior Software Engineer",
+    description: "Senior software engineer building full-stack platforms, microservices, and AI-assisted delivery workflows.",
+    image: "https://nasrul.dev/nasrul-memoji-400.png",
     sameAs: [
       "https://github.com/nasrulirfan",
       "https://linkedin.com/in/nasrulirfan",
       "https://twitter.com/nasrulirfan",
     ],
     knowsAbout: [
-      "JavaScript",
-      "TypeScript",
-      "React",
+      "Python",
+      "Laravel",
       "Next.js",
-      "Node.js",
-      "Full-Stack Development",
-      "Web Development",
+      "React",
+      "AWS",
+      "Kubernetes",
+      "Platform Engineering",
+      "Microservices Architecture",
+      "AI-Assisted Software Delivery",
       "Software Engineering",
     ],
     worksFor: {
       "@type": "Organization",
-      name: "Freelance",
+      name: "Omnicom Group",
     },
     address: {
       "@type": "PostalAddress",
@@ -131,7 +133,7 @@ export function generateWebsiteStructuredData() {
     "@type": "WebSite",
     name: "Wan Nasrul Irfan Portfolio",
     url: "https://nasrul.dev",
-    description: "Professional portfolio of Wan Nasrul Irfan, a full-stack developer specializing in modern web technologies.",
+    description: "Professional portfolio of Wan Nasrul Irfan, a senior software engineer focused on platform systems, full-stack delivery, and AI-assisted workflows.",
     author: {
       "@type": "Person",
       name: "Wan Nasrul Irfan",

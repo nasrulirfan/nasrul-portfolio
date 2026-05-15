@@ -53,7 +53,7 @@ export default function Home() {
             <AnimatedSection animation="fade-in" delay={0.1}>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6 border border-primary/20">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                Available for new opportunities
+                Open to select opportunities
               </div>
             </AnimatedSection>
             
@@ -65,11 +65,11 @@ export default function Home() {
                 </p>
                 <Heading level={1} className="text-4xl md:text-6xl lg:text-7xl font-bold">
                   <span className="bg-gradient-to-r from-blue-400 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    Full-Stack
+                    Senior Software
                   </span>
                   <br />
                   <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 bg-clip-text text-transparent">
-                    Developer
+                    Engineer
                   </span>
                 </Heading>
               </div>
@@ -79,11 +79,12 @@ export default function Home() {
             <AnimatedSection animation="fade-in" delay={0.4}>
               <div className="flex flex-wrap justify-center gap-3 mb-8 max-w-2xl mx-auto">
                 {[
-                  { name: "Laravel", color: "from-red-500 to-red-700" },
-                  { name: "Vue.js", color: "from-green-400 to-green-600" },
-                  { name: "React", color: "from-blue-400 to-blue-600" },
                   { name: "Python", color: "from-yellow-500 to-yellow-700" },
-                  { name: "PHP", color: "from-purple-500 to-purple-700" },
+                  { name: "Laravel", color: "from-red-500 to-red-700" },
+                  { name: "Next.js", color: "from-slate-600 to-slate-800" },
+                  { name: "React", color: "from-blue-400 to-blue-600" },
+                  { name: "Kubernetes", color: "from-blue-500 to-blue-700" },
+                  { name: "AWS", color: "from-orange-400 to-orange-600" },
                   { name: "PostgreSQL", color: "from-blue-600 to-blue-800" },
                 ].map((tech, index) => (
                   <div
@@ -100,11 +101,13 @@ export default function Home() {
             {/* Description */}
             <AnimatedSection animation="slide-up" delay={0.6}>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
-                Crafting exceptional digital experiences with{' '}
-                <span className="text-primary font-semibold">5+ years</span> of expertise in{' '}
+                Building full-stack platforms, microservices, and{' '}
                 <span className="text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text font-semibold">
-                  modern web technologies
-                </span>
+                  AI-assisted delivery workflows
+                </span>{' '}
+                with{' '}
+                <span className="text-primary font-semibold">5+ years</span> of expertise in{' '}
+                product, platform, and enterprise engineering
               </p>
             </AnimatedSection>
 
@@ -112,15 +115,15 @@ export default function Home() {
             <AnimatedSection animation="slide-up" delay={0.7}>
               <div className="grid grid-cols-3 gap-8 max-w-md mx-auto mb-8">
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">12+</div>
-                  <div className="text-xs text-muted-foreground">Enterprise Projects</div>
+                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">7</div>
+                  <div className="text-xs text-muted-foreground">Career Roles</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-primary mb-1">5+</div>
                   <div className="text-xs text-muted-foreground">Years</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">20+</div>
+                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">25+</div>
                   <div className="text-xs text-muted-foreground">Technologies</div>
                 </div>
               </div>
@@ -142,7 +145,7 @@ export default function Home() {
                     <svg className="w-4 h-4 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
-                    Download Resume
+                    Download CV
                   </a>
                 </Button>
               </div>

@@ -20,23 +20,22 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Wan Nasrul Irfan - Full-Stack Developer",
-    template: "%s | Wan Nasrul Irfan - Full-Stack Developer"
+    default: "Wan Nasrul Irfan - Senior Software Engineer",
+    template: "%s | Wan Nasrul Irfan - Senior Software Engineer"
   },
-  description: "Passionate full-stack developer with 5+ years of experience building scalable web applications. Specializing in React, Next.js, Node.js, and modern web technologies.",
+  description: "Senior software engineer with 5+ years of experience building full-stack platforms, microservices, and AI-assisted delivery workflows with Python, Laravel, Next.js, and AWS.",
   keywords: [
     "Wan Nasrul Irfan",
-    "Full-Stack Developer",
-    "React Developer",
+    "Senior Software Engineer",
+    "Platform Engineer",
+    "Python Developer",
+    "Laravel Developer",
     "Next.js Developer",
-    "TypeScript Developer",
-    "Node.js Developer",
-    "Web Developer Malaysia",
-    "Frontend Developer",
-    "Backend Developer",
-    "JavaScript Developer",
+    "AWS Developer",
+    "Kubernetes Engineer",
+    "Software Engineer Malaysia",
+    "AI-Assisted Software Engineering",
     "Software Engineer",
-    "Web Development",
     "Portfolio"
   ],
   authors: [{ name: "Wan Nasrul Irfan", url: "https://nasrul.dev" }],
@@ -51,21 +50,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://nasrul.dev",
     siteName: "Wan Nasrul Irfan Portfolio",
-    title: "Wan Nasrul Irfan - Full-Stack Developer",
-    description: "Passionate full-stack developer with 5+ years of experience building scalable web applications. Specializing in React, Next.js, Node.js, and modern web technologies.",
+    title: "Wan Nasrul Irfan - Senior Software Engineer",
+    description: "Senior software engineer with 5+ years of experience building full-stack platforms, microservices, and AI-assisted delivery workflows with Python, Laravel, Next.js, and AWS.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Wan Nasrul Irfan - Full-Stack Developer",
+        alt: "Wan Nasrul Irfan - Senior Software Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wan Nasrul Irfan - Full-Stack Developer",
-    description: "Passionate full-stack developer with 5+ years of experience building scalable web applications.",
+    title: "Wan Nasrul Irfan - Senior Software Engineer",
+    description: "Senior software engineer with 5+ years of experience building full-stack platforms, microservices, and AI-assisted delivery workflows.",
     images: ["/og-image.png"],
     creator: "@nasrulirfan",
   },

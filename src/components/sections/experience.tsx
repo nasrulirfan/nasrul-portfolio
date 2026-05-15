@@ -18,61 +18,99 @@ interface Experience {
 
 const experienceData: Experience[] = [
   {
-    title: "Technical Team Lead",
-    company: "Leo AI",
+    title: "Technical Lead & Founding Engineer",
+    company: "LeadLah",
     location: "Remote",
-    period: "Aug 2025 - Present",
+    period: "Mar 2026 - Present",
     type: "freelance",
     description: [
-      "Architected and delivered a full-stack platform from the ground up using Next.js, MongoDB, Stripe, and Vercel to automate enterprise-level service delivery",
-      "Led the build-out of an AI-powered solution that digitizes and streamlines traditionally expensive compliance consulting workflows",
-      "Established comprehensive monitoring with Sentry and proactive alerting to preserve uptime and data integrity",
-      "Maintained a disciplined Git workflow and CI/CD automation to accelerate delivery and uphold code quality"
+      "Architected and delivered a full-stack enterprise service delivery platform from the ground up using Next.js, PostgreSQL, Redis, Docker, and scalable infrastructure practices",
+      "Owned infrastructure budgeting and cost optimization, reducing hosting costs while maintaining performance through bare-metal servers and self-hosted Coolify deployments",
+      "Improved system reliability and observability by implementing Sentry monitoring for faster issue detection, debugging, and resolution",
+      "Established a disciplined Git workflow and CI/CD pipelines to streamline collaboration, improve release consistency, and accelerate delivery"
     ],
-    technologies: ["Next.js", "Node.js", "React", "MongoDB", "AWS", "Stripe", "Vercel", "Redis", "Docker", "Sentry", "Git", "Agile"],
+    technologies: ["Next.js", "Nest.js", "React", "PostgreSQL", "Redis", "Coolify", "Docker", "Cloudflare", "HitPay", "Sentry", "Git"],
     achievements: [
-      "Delivered the company’s first AI-native compliance automation platform",
-      "Reduced operational risk through observability-first engineering practices",
-      "Improved deployment velocity with streamlined Git-based workflows"
+      "Launched a new full-stack platform with cost-aware infrastructure decisions",
+      "Improved reliability through observability-first engineering practices",
+      "Raised delivery consistency with disciplined Git and CI/CD workflows"
+    ]
+  },
+  {
+    title: "Senior Software Engineer (Platform)",
+    company: "Omnicom Group",
+    location: "Remote",
+    period: "Dec 2025 - Present",
+    type: "full-time",
+    description: [
+      "Managed Kubernetes-based GitOps workflows and Terraform infrastructure, improving deployment consistency and reducing manual configuration effort",
+      "Designed, developed, and maintained microservice APIs using FastMCP on AWS, supported by robust CI/CD pipelines in GitHub Actions",
+      "Implemented and optimized diverse data storage solutions across RDBMS, NoSQL, object storage, and vector databases for scalable high-performance systems",
+      "Drove R&D for platform tooling, introducing new solutions and leading knowledge-sharing sessions across the Global Engineering Group",
+      "Initiated and standardized end-to-end AI best practices and workflows for the platform team, improving productivity, consistency, and delivery efficiency"
+    ],
+    technologies: ["Python", "FastMCP", "Kubernetes", "Terraform", "AWS", "GraphQL", "PostgreSQL", "Redis", "Datadog", "GitHub Actions"],
+    achievements: [
+      "Improved deployment consistency through GitOps and Terraform-driven platform workflows",
+      "Expanded platform capabilities with AWS-hosted microservice APIs",
+      "Standardized AI-assisted engineering workflows for broader team impact"
+    ]
+  },
+  {
+    title: "Technical Lead",
+    company: "Leo AI",
+    location: "Remote",
+    period: "Aug 2025 - Mar 2026",
+    type: "freelance",
+    description: [
+      "Architected and delivered a full-stack solution from the ground up using Next.js, MongoDB, Stripe, and Vercel for automated enterprise-level service delivery",
+      "Led the development of an AI-powered platform that digitized and automated expensive compliance consulting workflows",
+      "Established comprehensive Sentry-based monitoring to preserve uptime, accelerate issue response, and protect data integrity",
+      "Maintained a disciplined Git workflow and CI/CD pipelines to streamline development and delivery"
+    ],
+    technologies: ["Next.js", "Node.js", "React", "MongoDB", "AWS", "Stripe", "Vercel", "Redis", "Docker", "Sentry", "Git"],
+    achievements: [
+      "Delivered an AI-powered compliance platform from zero to launch",
+      "Reduced operational risk through observability-first engineering",
+      "Improved delivery velocity with streamlined Git-based workflows"
     ]
   },
   {
     title: "Senior Software Engineer",
     company: "CompAsia",
     location: "Malaysia",
-    period: "July 2024 - Present",
+    period: "Jul 2024 - Dec 2025",
     type: "full-time",
     description: [
-      "Spearheaded the rapid development and rollout of a company-wide e-Invoicing system by architecting a modular Laravel solution under aggressive timelines",
-      "Designed and implemented AWS infrastructure (ALB, EC2, nginx, S3, MongoDB Atlas, CloudFront, Docker) plus Jenkins-based CI/CD pipelines for a new MDM initiative",
-      "Led end-to-end delivery of the Inventory Management System—from requirements and design through implementation, documentation, and technical reviews",
-      "Established Jenkins CI/CD pipelines for the Inventory Management System and Apple Mobile Device Management System to automate build and deployment flows",
-      "Engineered Apple API integrations that streamlined inventory data synchronization and core operational workflows",
-      "Boosted application performance through complex MySQL query optimization and robust Redis caching and queueing strategies"
+      "Spearheaded the rapid development and deployment of a company-wide e-Invoicing system by architecting a modular Laravel solution under aggressive timelines",
+      "Designed the full AWS-based infrastructure and Jenkins CI/CD pipelines for a new MDM initiative, contributing R&D for an undocumented project and delivering it before deadline",
+      "Led full-stack delivery of a critical Inventory Management System from requirements analysis and design through implementation and technical documentation",
+      "Integrated Apple APIs into the inventory system to streamline data synchronization and core operational workflows",
+      "Boosted application performance by optimizing complex MySQL queries and implementing Redis-based caching and queueing strategies"
     ],
-    technologies: ["Laravel", "Vue.js 3", "MySQL", "MongoDB", "AWS (ALB, EC2, S3, CloudFront)", "Redis", "Docker", "nginx", "Rollbar", "Jenkins", "Jira", "Git"],
+    technologies: ["Laravel", "Vue.js 3", "MySQL", "MongoDB", "AWS", "Redis", "Docker", "nginx", "Rollbar", "Jenkins", "Jira", "Git"],
     achievements: [
-      "Delivered enterprise-wide e-Invoicing and MDM systems on time despite accelerated schedules",
+      "Delivered enterprise-wide e-Invoicing and MDM systems on accelerated schedules",
       "Improved deployment reliability with purpose-built Jenkins pipelines",
       "Enhanced performance and data accuracy through database and caching optimizations"
     ]
   },
   {
-    title: "Middle Senior Software Developer",
+    title: "Founding Engineer",
     company: "HiTower IT",
     location: "Malaysia",
-    period: "Dec 2023 - July 2024",
+    period: "Dec 2023 - Jul 2024",
     type: "full-time",
     description: [
-      "Played a pivotal role in the move from a monolithic platform to microservices, covering architecture design, estimation, development, and documentation to unlock scalability",
-      "Pioneered performance optimizations by researching and implementing micro-frontends and Laravel Octane (Swoole, RoadRunner, FrankenPHP) to elevate UX",
-      "Established a culture of code quality through rigorous reviews while mentoring junior developers on design patterns and professional growth"
+      "Played a pivotal role in the transition from a monolithic to a microservices architecture, contributing across design, planning, estimation, development, and documentation",
+      "Pioneered performance optimization initiatives by researching and implementing micro-frontends and Laravel Octane to enhance user experience",
+      "Established a culture of code quality by leading rigorous code reviews and mentoring junior developers on design patterns and professional growth"
     ],
-    technologies: ["PHP (Laravel 11)", "Vue.js 2 & 3", "PostgreSQL", "RabbitMQ", "Docker", "GitLab CI/CD", "Linux", "nginx", "Jira", "Git", "Agile"],
+    technologies: ["PHP (Laravel 11)", "Vue.js 2 & 3", "PostgreSQL", "RabbitMQ", "Docker", "GitLab CI/CD", "Linux", "nginx", "Jira", "Git"],
     achievements: [
-      "Unlocked substantial scalability wins via microservice adoption",
+      "Unlocked substantial scalability wins through microservice adoption",
       "Elevated user experience with micro-frontend and Octane initiatives",
-      "Raised overall engineering bar through structured mentoring and reviews"
+      "Raised the engineering bar through structured mentoring and reviews"
     ]
   },
   {
@@ -82,10 +120,10 @@ const experienceData: Experience[] = [
     period: "May 2022 - Dec 2023",
     type: "full-time",
     description: [
-      "Developed a high-efficiency Python-based packet testing framework and SDK for Intel FPGA products, slashing manual effort and accelerating time-to-market",
-      "Engineered a real-time database health monitoring system with Python, PostgreSQL, and Docker to prevent unused database situations and improve reliability",
-      "Identified and resolved performance bottlenecks that significantly reduced unused storage and boosted system stability",
-      "Designed and built a talent management web application in React and GraphQL that helps managers align projects with employee skills"
+      "Developed a high-efficiency Python-based packet testing framework and SDK for Intel FPGA products, significantly decreasing manual testing and accelerating time-to-market",
+      "Engineered a real-time database health monitoring system with Python, PostgreSQL, and Docker that improved reliability and data accuracy",
+      "Identified and resolved performance bottlenecks, reducing unused storage and improving overall system stability",
+      "Designed and built a talent management web application in React and GraphQL to help managers align projects with employee skills"
     ],
     technologies: ["Python", "C++", "R", "P4", "React", "PostgreSQL", "Docker", "K8s", "GraphQL", "neo4j", "Linux", "Git"],
     achievements: [
@@ -174,8 +212,8 @@ export function ExperienceSection() {
             Work Experience
           </Heading>
           <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-            A journey through my professional career, showcasing growth and achievements 
-            in full-stack development.
+            A cross-section of product, platform, and freelance engineering work spanning
+            enterprise systems, internal tooling, and AI-enabled delivery.
           </p>
         </div>
 
@@ -344,11 +382,11 @@ export function ExperienceSection() {
             <div className="text-sm font-medium text-foreground">Years Experience</div>
           </div>
           <div className="text-center p-6 rounded-lg bg-card border border-border">
-            <div className="text-3xl font-bold text-primary mb-2">4</div>
-            <div className="text-sm font-medium text-foreground">Companies</div>
+            <div className="text-3xl font-bold text-primary mb-2">7</div>
+            <div className="text-sm font-medium text-foreground">Career Roles</div>
           </div>
           <div className="text-center p-6 rounded-lg bg-card border border-border">
-            <div className="text-3xl font-bold text-primary mb-2">20+</div>
+            <div className="text-3xl font-bold text-primary mb-2">25+</div>
             <div className="text-sm font-medium text-foreground">Technologies Used</div>
           </div>
         </div>
